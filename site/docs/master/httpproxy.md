@@ -198,7 +198,7 @@ spec:
 HTTPProxy follows a similar pattern to Ingress for configuring TLS credentials.
 
 You can secure a HTTPProxy by specifying a Secret that contains TLS private key and certificate information.
-If multiple HTTPProxies utilize the same Secret, the certificate must include the necessary Subject Authority Name (SAN) for each fqdn.
+If multiple HTTPProxies utilize the same Secret, the certificate must include the necessary Subject Alternative Name (SAN) for each fqdn.
 
 Contour (via Envoy) requires that clients send the Server Name Indication (SNI) TLS extension so that requests can be routed to the correct virtual host.
 Virtual hosts are strongly bound to SNI names.
